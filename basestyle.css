@@ -1,5 +1,67 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
 html{
-    background-color: whitesmoke;
+    background-color: #4a525aff;
+    height: 100%;
+    font-family: OpenSans;
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+}
+
+p{
+    margin: 0.25em;
+}
+
+/*Grid Start*/
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-rows:max-content auto max-content;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  height: 100vh;
+  background-color: #4a525aff;
+}
+
+.grid-container > div {
+  padding: 0.5vh 0;
+  font-size: 30px;
+}
+
+.grid-container > .header {
+    background-color: #ff4b3eff;
+    color: #e1dee3ff;
+    font-size: x-large;
+}
+
+.grid-container > .footer {
+    background-color: #24272bff;
+    color: #e1dee3ff;
+    font-size: large;
+}
+/*Grid End*/
+
+.header_p {
+    margin: 5px;
+}
+
+.footer_p {
+    margin: 5px;
 }
 
 .SB_Running_Gifs{
